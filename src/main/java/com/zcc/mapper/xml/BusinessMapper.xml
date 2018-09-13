@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zcc.mapper.BusinessMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.zcc.entity.Business">
+		<id column="id" property="id" />
+		<result column="userid" property="userid" />
+		<result column="sellername" property="sellername" />
+		<result column="sellweixin" property="sellweixin" />
+		<result column="sellali" property="sellali" />
+		<result column="sellcard" property="sellcard" />
+		<result column="selljf" property="selljf" />
+		<result column="buytime" property="buytime" />
+		<result column="configtime" property="configtime" />
+		<result column="finishtime" property="finishtime" />
+		<result column="status" property="status" />
+		<result column="buyercard" property="buyercard" />
+		<result column="buyerid" property="buyerid" />
+		<result column="buyeraccount" property="buyeraccount" />
+		<result column="create_date" property="create_date" />
+		<result column="lastup_date" property="lastup_date" />
+	</resultMap>
+</mapper>

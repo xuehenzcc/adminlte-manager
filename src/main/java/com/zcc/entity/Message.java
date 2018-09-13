@@ -17,7 +17,7 @@ import com.baomidou.mybatisplus.enums.IdType;
  * @author c0z00k8
  *
  */
-@TableName("message_t")
+@TableName("gm_message_t")
 public class Message extends Model<Message>{
 
 	/**
@@ -25,19 +25,20 @@ public class Message extends Model<Message>{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	@TableId(type=IdType.UUID)
-	private String id;
+	@TableId(type=IdType.AUTO)
+	private Integer id;
 	private String content;
 	private String userid;
 	private String account;
-	private Date createdate;
+	private String username;
+	private Date create_date;
 	private String telephone;
 	
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -67,12 +68,21 @@ public class Message extends Model<Message>{
 		this.userid = userid;
 	}
 
-	public Date getCreatedate() {
-		return createdate;
+
+	public String getUsername() {
+		return username;
 	}
 
-	public void setCreatedate(Date createdate) {
-		this.createdate = createdate;
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Date getCreate_date() {
+		return create_date;
+	}
+
+	public void setCreate_date(Date create_date) {
+		this.create_date = create_date;
 	}
 
 	public String getTelephone() {

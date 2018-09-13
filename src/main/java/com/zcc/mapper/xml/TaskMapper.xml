@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zcc.mapper.TaskMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.zcc.entity.Task">
+		<id column="id" property="id" />
+		<result column="title" property="title" />
+		<result column="status" property="status" />
+		<result column="taskjf" property="taskjf" />
+		<result column="userid" property="userid" />
+		<result column="username" property="username" />
+		<result column="attribute2" property="attribute2" />
+		<result column="create_date" property="create_date" />
+		<result column="lastup_date" property="lastup_date" />
+	</resultMap>
+
+</mapper>

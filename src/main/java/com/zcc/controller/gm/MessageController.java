@@ -23,7 +23,7 @@ import com.zcc.entity.Message;
 import com.zcc.service.IMemberService;
 import com.zcc.service.IMessageService;
 /**
- * 用户控制器
+ * 消息控制器
  * @author Gaojun.Zhou
  * @date 2016年12月13日 上午10:22:41
  */
@@ -35,7 +35,7 @@ public class MessageController extends SuperController{
 	@Autowired private IMemberService memberService;
 	
 	/**
-	 * 分页查询用户
+	 * 分页查询消息
 	 */
 	@RequiresPermissions("listMessage")
     @RequestMapping("/list/{pageNumber}")  
@@ -55,7 +55,7 @@ public class MessageController extends SuperController{
     	return "gm/message/list";
     } 
     /**
-     * 新增用户
+     * 新增消息
      */
 	@RequiresPermissions("addMessage")
     @RequestMapping("/add")  
@@ -66,12 +66,12 @@ public class MessageController extends SuperController{
     /**
      * 执行新增
      */
-    @Log("创建用户")
+    @Log("创建消息")
     @RequiresPermissions("addMessage")
     @RequestMapping("/doAdd")  
     @ResponseBody
     public  Rest doAdd(Message message){
-    	message.setCreatedate(new Date());
+    	message.setCreate_date(new Date());
     	String account = message.getAccount();
     	
     	EntityWrapper<Member> ew = new EntityWrapper<Member>();
@@ -87,9 +87,9 @@ public class MessageController extends SuperController{
     	return Rest.ok();
     }  
     /**
-     * 删除用户
+     * 删除消息
      */
-    @Log("删除用户")
+    @Log("删除消息")
     @RequiresPermissions("deleteMessage")
     @RequestMapping("/delete")  
     @ResponseBody
@@ -98,8 +98,20 @@ public class MessageController extends SuperController{
     	return Rest.ok();
     }  
     
+    /**
+     * 批量删除消息
+     */
+	@RequiresPermissions("deleteNotice")
+    @Log("批量删除消息")
+    @RequestMapping("/deleteBatch")  
+    @ResponseBody
+    public Rest deleteBatch(@RequestParam("id[]") List<String> ids){
+    	messageService.deleteBatchIds(ids);
+    	return Rest.ok();
+    } 
+	
 	/**
-	 * 编辑用户
+	 * 编辑消息
 	 */
     @RequestMapping("/edit/{id}")  
     @RequiresPermissions("editMessage")
@@ -121,7 +133,7 @@ public class MessageController extends SuperController{
     /**
      * 执行编辑
      */
-    @Log("编辑用户")
+    @Log("编辑消息")
     @RequiresPermissions("editMember")
     @RequestMapping("/doEdit")  
     @ResponseBody

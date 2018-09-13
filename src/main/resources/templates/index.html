@@ -153,6 +153,17 @@
                 pointHighlightStroke: "rgba(60,141,188,1)",
                 data: [30.05,35,36,42,50,61,72,76,78,80,82,83]
               }
+              /* ,
+              {
+                  label: "Digital Goods",
+                  fillColor: "rgba(144, 238 ,144, 0.5)",
+                  strokeColor: "rgba(144, 238 ,144, 0.5)",
+                  pointColor: "red",
+                  pointStrokeColor: "rgba(144, 238 ,144, 0.5)",
+                  pointHighlightFill: "rgba(144, 238 ,144, 0.5)",
+                  pointHighlightStroke: "rgba(144, 238 ,144, 0.5)",
+                  data: [10.05,45,36,32,70,81,92,96,78,10,22,83]
+                } */
             ]
           };
         
@@ -168,7 +179,7 @@
         /**
         	ajax 异步获取数据
         **/
-         $.post("/getData",{},function(data){
+        /*  $.post("/getData",{},function(data){
         	if(data.meta.success){
         		 var areaChartData = {
    		            labels: data.data.label,
@@ -187,7 +198,7 @@
    		          };
         		 lineChart.Line(areaChartData, lineChartOptions);
         	}
-        }); 
+        });  */
        
  	});
  </script>

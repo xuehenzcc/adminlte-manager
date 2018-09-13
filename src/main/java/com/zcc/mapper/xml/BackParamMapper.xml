@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zcc.mapper.BackParamMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.zcc.entity.BackParam">
+		<id column="id" property="id" />
+		<result column="account" property="account" />
+		<result column="password" property="password" />
+		<result column="username" property="username" />
+		<result column="safepwd" property="safepwd" />
+		<result column="telephone" property="telephone" />
+		<result column="alipaypic" property="alipaypic" />
+		<result column="weixinpic" property="weixinpic" />
+		<result column="bank_num" property="bank_num" />
+		<result column="bank_name" property="bank_name" />
+		<result column="jfcenter" property="jfcenter" />
+		<result column="jftask" property="jftask" />
+		<result column="jfbusiness" property="jfbusiness" />
+		<result column="jfzhuce" property="jfzhuce" />
+		<result column="jf_diya" property="jf_diya" />
+		<result column="task_token" property="task_token" />
+		<result column="usedtoken" property="usedtoken" />
+		<result column="pretake" property="pretake" />
+		<result column="pid" property="pid" />
+		<result column="status" property="status" />
+		<result column="jfold" property="jfold" />
+		<result column="version" property="version" />
+		<result column="create_date" property="create_date" />
+		<result column="lastup_date" property="lastup_date" />
+	</resultMap>
+</mapper>

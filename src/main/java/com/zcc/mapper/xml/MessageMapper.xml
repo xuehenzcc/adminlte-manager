@@ -7,7 +7,8 @@
 		<id column="id" property="id" />
 		<result column="account" property="account" />
 		<result column="userid" property="userid" />
-		<result column="createdate" property="createdate" />
+		<result column="username" property="username" />
+		<result column="create_date" property="create_date" />
 		<result column="content" property="content" />
 		<result column="telephone" property="telephone" />
 	</resultMap>
